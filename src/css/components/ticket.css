@@ -1,0 +1,158 @@
+/* ---------- Bandeau d'avertissement (site fictif) ---------- */
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 860px;
+    margin: 0 auto 40px;
+    padding: 18px 20px;
+    border: 1px solid var(--or-profond);
+    border-radius: var(--radius);
+    background-color: var(--doré-clair);
+    color: var(--texte);
+}
+
+.notice__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--noir-doux);
+    color: var(--or-profond);
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+.notice__text {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.notice__text a {
+    color: var(--or-fonce);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ---------- Cartes tarifs (page Billetterie) ---------- */
+.tickets {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.ticket {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanc);
+    border: 1px solid var(--bordure);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.ticket:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.ticket--featured {
+    background: linear-gradient(160deg, var(--noir-doux), #2a241a);
+    border-color: var(--or-profond);
+    color: var(--ivoir);
+}
+
+.ticket__badge {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: var(--or-profond);
+    color: var(--noir);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.ticket__name {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.ticket--featured .ticket__name {
+    color: var(--ivoir);
+}
+
+.ticket__price {
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--or-fonce);
+    margin-bottom: 4px;
+}
+
+.ticket--featured .ticket__price {
+    color: var(--or-profond);
+}
+
+.ticket__price-note {
+    font-size: 0.85rem;
+    color: var(--texte-doux);
+    margin-bottom: 18px;
+}
+
+.ticket--featured .ticket__price-note {
+    color: var(--gris-claire);
+}
+
+.ticket__features {
+    list-style: none;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.ticket__feature {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--texte-doux);
+}
+
+.ticket--featured .ticket__feature {
+    color: var(--doré-clair);
+}
+
+.ticket__feature::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--or-profond);
+    font-weight: 700;
+}
+
+.ticket .btn {
+    width: 100%;
+}
+
+/* ---------- Formulaire de réservation ---------- */
+.booking {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.booking__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 16px;
+}

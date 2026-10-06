@@ -1,132 +1,84 @@
 /* ------------------------------------------------------ */
-/* PAGE CONTACT – STYLE DANS LA CONTINUITÉ DU DESIGN */
+/* PAGE CONTACT                                            */
 /* ------------------------------------------------------ */
 
-/* ---------------------- */
-/* HERO CONTACT */
-/* ---------------------- */
-
-.hero--with-image {
-    position: relative;
-    height: 260px;
-    display: flex;
-    align-items: flex-end;
-    padding-bottom: 40px;
-    text-align: center;
-    color: var(--ivoir);
-}
-
-.hero__background {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(2px);
-}
-
-.hero__content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero__title {
-    font-family: var(--font-serif);
-    font-size: 2.4rem;
-    color: var(--ivoir);
-    margin-bottom: 0.5rem;
-}
-
-.hero__subtitle {
-    color: var(--doré-clair);
-    font-size: 1.1rem;
-}
-
-
-/* ---------------------- */
-/* LAYOUT – CONTACT PAGE */
-/* ---------------------- */
-
-.section {
-    background: var(--ivoir);
-    padding: 40px 0;
-}
-
 .contact {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
 }
 
-
-/* ---------------------- */
-/* CONTACT INFO (Gauche) */
-/* ---------------------- */
-
-.contact__info h2 {
-    font-size: 1.8rem;
+.contact__info h2,
+.contact__form-container h2 {
     font-family: var(--font-serif);
-    color: var(--noir);
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    color: var(--noir-doux);
     margin-bottom: 20px;
 }
 
+/* ---------------------- */
+/* Coordonnées            */
+/* ---------------------- */
+
 .contact__block {
-    background: white;
-    border: 2px solid var(--doré-clair);
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
+    background: var(--blanc);
+    border: 1px solid var(--bordure);
+    border-left: 4px solid var(--or-profond);
+    border-radius: var(--radius-sm);
+    padding: 22px 20px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
 }
 
 .contact__block h3 {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
-    color: var(--noir);
+    color: var(--noir-doux);
 }
 
 .contact__block address,
 .contact__block p {
-    color: var(--noir);
-    line-height: 1.5;
-    font-size: 1rem;
+    font-style: normal;
+    color: var(--texte-doux);
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.contact__block p:last-child {
+    margin-bottom: 0;
+}
+
+.contact__block strong {
+    color: var(--noir-doux);
 }
 
 .contact__block a {
-    color: var(--or-profond);
+    color: var(--or-fonce);
     font-weight: 600;
+    word-break: break-word;
+}
+
+.contact__block a:hover {
+    text-decoration: underline;
 }
 
 .contact__note {
     font-size: 0.9rem;
-    color: var(--gris-claire);
-    margin-top: 6px;
+    color: var(--texte-doux);
 }
 
 /* ---------------------- */
-/* CONTACT FORM (Droite) */
+/* Formulaire             */
 /* ---------------------- */
-
-.contact__form-container h2 {
-    font-family: var(--font-serif);
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--noir);
-}
 
 .contact__form {
-    background: white;
-    border: 2px solid var(--doré-clair);
-    border-radius: 14px;
-    padding: 28px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+    background: var(--blanc);
+    border: 1px solid var(--bordure);
+    border-top: 4px solid var(--or-profond);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    box-shadow: var(--shadow);
 }
 
 .form-group {
@@ -137,101 +89,59 @@
 
 .form-group label {
     font-weight: 600;
-    color: var(--noir);
+    color: var(--noir-doux);
     margin-bottom: 6px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    border: 1.5px solid var(--doré-clair);
-    padding: 12px;
-    border-radius: 10px;
+    width: 100%;
+    border: 1.5px solid var(--bordure);
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
     background: var(--ivoir);
+    color: var(--texte);
     font-family: var(--font-sans);
     font-size: 1rem;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--or-profond);
+    box-shadow: 0 0 0 3px rgba(215, 181, 110, 0.25);
 }
 
 .form-group textarea {
-    resize: none;
+    resize: vertical;
+    min-height: 140px;
 }
 
 .checkbox-label {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 400 !important;
+    cursor: pointer;
 }
 
-.checkbox-label input {
+.form-group .checkbox-label input {
     width: 18px;
     height: 18px;
+    flex-shrink: 0;
     accent-color: var(--or-profond);
+}
+
+.contact__form .btn {
+    width: 100%;
+    margin-top: 6px;
 }
 
 .form-note {
     font-size: 0.85rem;
-    color: var(--gris-claire);
-    margin-top: 10px;
-}
-
-/* ---------------------- */
-/* BUTTON */
-/* ---------------------- */
-
-.btn--primary {
-    background-color: var(--or-profond);
-    color: var(--noir);
-    padding: 14px 18px;
-    border-radius: 8px;
-    border: none;
-    font-weight: 600;
-    font-size: 1rem;
-    width: 100%;
-    margin-top: 10px;
-}
-
-
-/* ---------------------- */
-/* FOOTER */
-/* ---------------------- */
-
-.footer {
-    background: var(--noir);
-    color: var(--doré-clair);
-    padding: 40px 0 20px;
-    border-top: 2px solid var(--doré-clair);
-}
-
-.footer__title,
-.footer__heading {
-    font-family: var(--font-serif);
-    color: var(--doré-clair);
-}
-
-.footer__description {
-    color: var(--gris-claire);
-}
-
-.footer__links a {
-    color: var(--ivoir);
-}
-
-.footer__social-link img {
-    filter: brightness(1);
-}
-
-.footer__newsletter-input {
-    border: 2px solid var(--doré-clair);
-    border-radius: 8px;
-    padding: 12px;
-    background: var(--ivoir);
-}
-
-.footer__bottom {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.footer__legal-link {
-    color: var(--doré-clair);
+    color: var(--texte-doux);
+    margin-top: 12px;
 }

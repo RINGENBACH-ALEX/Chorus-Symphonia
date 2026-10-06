@@ -1,5 +1,6 @@
+/* Galerie photos (page détail artiste) */
 .gallery {
-    margin-top: 4rem;
+    padding: var(--section-space) 0;
 }
 
 .gallery__title {
@@ -9,9 +10,11 @@
 
 .gallery__viewport {
     width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     overflow: hidden;
-    border-radius: 12px;
-    position: relative;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
 }
 
 .gallery__track {
@@ -19,6 +22,7 @@
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
 
@@ -29,35 +33,38 @@
 .gallery__slide {
     flex: 0 0 100%;
     width: 100%;
-    height: auto;
-    border-radius: 12px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    scroll-snap-align: start;
 }
 
 .gallery__arrows {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     margin-top: 1.5rem;
 }
 
 .gallery__arrow {
-    background: rgba(0, 0, 0, 0.6);
-    border: none;
-    padding: 0.7rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 1px solid var(--or-profond);
+    border-radius: 50%;
+    background: var(--noir-doux);
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
 }
 
 .gallery__arrow:hover {
-    opacity: 0.8;
+    background: #2a241a;
+    transform: scale(1.06);
 }
 
 .gallery__arrow img {
-    width: 64px;
-    height: 64px;
+    width: 28px;
+    height: 28px;
 }

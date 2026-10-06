@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billetterie | Chorus Symphonia 2025</title>
+    <meta name="description"
+        content="Tarifs, abonnements et réservation pour le festival Chorus Symphonia 2025 (projet étudiant fictif)">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Arimo:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icons/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/icons/favicons/site.webmanifest" />
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="header__nav" role="navigation" aria-label="Navigation principale">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/icons/logo.svg" alt="" class="header__logo-image" aria-hidden="true">
+                    <span>Chorus Symphonia</span>
+                </a>
+                <button class="header__menu-toggle" id="menuToggle" aria-label="Ouvrir le menu de navigation"
+                    aria-expanded="false" aria-controls="navMenu">
+                    <span class="header__menu-line"></span>
+                    <span class="header__menu-line"></span>
+                    <span class="header__menu-line"></span>
+                </button>
+                <ul class="header__nav-list" id="navMenu">
+                    <li class="header__nav-item"><a href="programme.html" class="header__nav-link">Programme</a></li>
+                    <li class="header__nav-item"><a href="artistes.html" class="header__nav-link">Artistes</a></li>
+                    <li class="header__nav-item"><a href="scenes.html" class="header__nav-link">Scènes</a></li>
+                    <li class="header__nav-item"><a href="festival.html" class="header__nav-link">Le Festival</a></li>
+                    <li class="header__nav-item"><a href="billetterie.html"
+                            class="header__nav-link header__nav-link--active" aria-current="page">Billetterie</a></li>
+                    <li class="header__nav-item"><a href="infos_pratiques.html" class="header__nav-link">Infos
+                            pratiques</a></li>
+                    <li class="header__nav-item"><a href="contact.html" class="header__nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="hero hero--with-image hero--small">
+            <img src="assets/img/hero_festival.webp" alt="" class="hero__background" aria-hidden="true">
+            <div class="hero__overlay"></div>
+            <div class="container">
+                <div class="hero__content">
+                    <p class="hero__label">15 – 22 juin 2025</p>
+                    <h1 class="hero__title">Billetterie</h1>
+                    <p class="hero__subtitle">Choisissez votre formule et réservez vos places</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="notice" role="note">
+                    <span class="notice__icon" aria-hidden="true">!</span>
+                    <p class="notice__text">
+                        <strong>Site fictif réalisé dans le cadre d'un projet étudiant.</strong>
+                        Aucun billet n'est réellement vendu et aucune donnée n'est envoyée.
+                        <a href="mentions_legales.html">En savoir plus</a>
+                    </p>
+                </div>
+
+                <h2 class="section__title">Nos Formules</h2>
+
+                <div class="tickets tickets--4">
+                    <article class="ticket">
+                        <h3 class="ticket__name">Place à l'unité</h3>
+                        <p class="ticket__price">dès 35€</p>
+                        <p class="ticket__price-note">Plein tarif de 65€ à 120€</p>
+                        <ul class="ticket__features">
+                            <li class="ticket__feature">1 concert au choix</li>
+                            <li class="ticket__feature">Tarif réduit : étudiants, -26 ans, demandeurs d'emploi</li>
+                            <li class="ticket__feature">Placement selon la salle</li>
+                        </ul>
+                        <a href="#reservation" class="btn btn--secondary">Choisir</a>
+                    </article>
+
+                    <article class="ticket">
+                        <h3 class="ticket__name">Abonnement 3 concerts</h3>
+                        <p class="ticket__price">150€</p>
+                        <p class="ticket__price-note">au lieu de 195€</p>
+                        <ul class="ticket__features">
+                            <li class="ticket__feature">3 concerts au choix</li>
+                            <li class="ticket__feature">Économisez 45€</li>
+                            <li class="ticket__feature">Billets nominatifs</li>
+                        </ul>
+                        <a href="#reservation" class="btn btn--secondary">Choisir</a>
+                    </article>
+
+                    <article class="ticket">
+                        <h3 class="ticket__name">Abonnement 5 concerts</h3>
+                        <p class="ticket__price">240€</p>
+                        <p class="ticket__price-note">au lieu de 325€</p>
+                        <ul class="ticket__features">
+                            <li class="ticket__feature">5 concerts au choix</li>
+                            <li class="ticket__feature">Économisez 85€</li>
+                            <li class="ticket__feature">Accès prioritaire en salle</li>
+                        </ul>
+                        <a href="#reservation" class="btn btn--secondary">Choisir</a>
+                    </article>
+
+                    <article class="ticket ticket--featured">
+                        <span class="ticket__badge">Meilleure offre</span>
+                        <h3 class="ticket__name">Pass Festival</h3>
+                        <p class="ticket__price">380€</p>
+                        <p class="ticket__price-note">au lieu de 520€</p>
+                        <ul class="ticket__features">
+                            <li class="ticket__feature">Les 8 concerts du festival</li>
+                            <li class="ticket__feature">Économisez 140€</li>
+                            <li class="ticket__feature">Programme offert</li>
+                        </ul>
+                        <a href="#reservation" class="btn btn--primary">Choisir</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--light" id="reservation">
+            <div class="container">
+                <h2 class="section__title">Réserver vos places</h2>
+
+                <div class="booking">
+                    <form class="contact__form" action="#" aria-label="Formulaire de réservation">
+                        <div class="booking__row">
+                            <div class="form-group">
+                                <label for="concert">Concert <abbr title="obligatoire">*</abbr></label>
+                                <select id="concert" name="concert" required>
+                                    <option value="">Sélectionnez un concert</option>
+                                    <option value="15">15 juin – Symphonie n°9 de Beethoven</option>
+                                    <option value="16">16 juin – Les Quatre Saisons de Vivaldi</option>
+                                    <option value="17">17 juin – Concerto pour piano n°2 de Rachmaninov</option>
+                                    <option value="18">18 juin – Le Sacre du Printemps</option>
+                                    <option value="19">19 juin – Requiem de Mozart</option>
+                                    <option value="20">20 juin – Symphonie n°5 de Mahler</option>
+                                    <option value="21">21 juin – Concerto pour violon de Tchaïkovski</option>
+                                    <option value="22">22 juin – Symphonie n°7 de Beethoven</option>
+                                    <option value="pass">Pass Festival (8 concerts)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tarif">Tarif <abbr title="obligatoire">*</abbr></label>
+                                <select id="tarif" name="tarif" required>
+                                    <option value="plein">Plein tarif</option>
+                                    <option value="reduit">Tarif réduit</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="booking__row">
+                            <div class="form-group">
+                                <label for="places">Nombre de places <abbr title="obligatoire">*</abbr></label>
+                                <input type="number" id="places" name="places" min="1" max="10" value="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-email">Email <abbr title="obligatoire">*</abbr></label>
+                                <input type="email" id="booking-email" name="email" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary">Réserver</button>
+                        <p class="form-note">Projet étudiant : ce formulaire est une démonstration, aucune réservation
+                            n'est enregistrée.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h3 class="footer__title">Chorus Symphonia</h3>
+                    <p class="footer__description">Le rendez-vous incontournable de la musique classique à Paris depuis
+                        1998.</p>
+                    <div class="footer__contact">
+                        <p>Contact</p>
+                        <p>+33 1 23 45 67 89</p>
+                        <p>contact@chorussymphonia.fr</p>
+                        <p>Opéra National<br>8 Rue Scribe, 75009 Paris</p>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__heading">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="index.html" class="footer__link">Accueil</a></li>
+                        <li class="footer__link-item"><a href="festival.html" class="footer__link">Le Festival</a></li>
+                        <li class="footer__link-item"><a href="programme.html" class="footer__link">Programme</a></li>
+                        <li class="footer__link-item"><a href="artistes.html" class="footer__link">Artistes</a></li>
+                        <li class="footer__link-item"><a href="scenes.html" class="footer__link">Scènes</a></li>
+                        <li class="footer__link-item"><a href="billetterie.html" class="footer__link">Billetterie</a></li>
+                        <li class="footer__link-item"><a href="infos_pratiques.html" class="footer__link">Infos
+                                pratiques</a></li>
+                        <li class="footer__link-item"><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__heading">Suivez-nous</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook" title="Facebook" class="footer__social-link">
+                            <img src="assets/icons/facebook_blanc.svg" alt="" width="24" height="24" loading="lazy">
+                        </a>
+                        <a href="#" aria-label="Twitter" title="Twitter" class="footer__social-link">
+                            <img src="assets/icons/twitter_blanc.svg" alt="" width="24" height="24" loading="lazy">
+                        </a>
+                        <a href="#" aria-label="Instagram" title="Instagram" class="footer__social-link">
+                            <img src="assets/icons/instagram_blanc.svg" alt="" width="24" height="24" loading="lazy">
+                        </a>
+                        <a href="#" aria-label="YouTube" title="YouTube" class="footer__social-link">
+                            <img src="assets/icons/youtube_blanc.svg" alt="" width="24" height="24" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__heading">Newsletter</h4>
+                    <form class="footer__newsletter-form" aria-label="Formulaire d'inscription à la newsletter">
+                        <label for="newsletter-email" class="sr-only">Adresse email pour la newsletter</label>
+                        <input type="email" id="newsletter-email" placeholder="Votre email"
+                            class="footer__newsletter-input" required aria-required="true">
+                        <button type="submit" class="btn btn--primary btn--sm">OK</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 Chorus Symphonia. Tous droits réservés. <a href="mentions_legales.html"
+                        class="footer__legal-link">Mentions légales</a></p>
+                <p class="footer__disclaimer">Site fictif réalisé dans un cadre pédagogique (projet étudiant BUT MMI).
+                    Aucun lien avec les marques, lieux et artistes cités.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/menu.js"></script>
+</body>
+
+</html>

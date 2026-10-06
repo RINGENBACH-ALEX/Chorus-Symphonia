@@ -1,0 +1,146 @@
+/* ---------- Cartes artistes (page Artistes) ---------- */
+.artist {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanc);
+    border: 1px solid var(--bordure);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.artist:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.artist__image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: var(--noir-doux);
+}
+
+.artist__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.artist:hover .artist__image img {
+    transform: scale(1.05);
+}
+
+.artist__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 24px;
+}
+
+.artist__name {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    color: var(--noir-doux);
+    margin-bottom: 6px;
+}
+
+.artist__role {
+    color: var(--or-fonce);
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.artist__description {
+    color: var(--texte-doux);
+    line-height: 1.65;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.artist__info .btn {
+    align-self: flex-start;
+}
+
+/* La modale n'a pas de script associé : on la masque */
+.modal {
+    display: none;
+}
+
+/* ---------- Hero de la page détail artiste ---------- */
+.artist-hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 380px;
+    padding: 80px 0 48px;
+    background-color: var(--noir-doux);
+    overflow: hidden;
+}
+
+.artist-hero__image-wrapper {
+    position: absolute;
+    inset: 0;
+}
+
+.artist-hero__image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.artist-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.artist-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.artist-hero__content {
+    text-align: center;
+}
+
+.artist-hero__name {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    color: var(--ivoir);
+    margin: 0 0 8px;
+}
+
+.artist-hero__role {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--or-profond);
+    margin-bottom: 24px;
+}
+
+.artist-hero__back-link {
+    color: var(--doré-clair);
+}
+
+/* Biographie */
+.content-text {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.content-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--texte-doux);
+    margin-bottom: 20px;
+}

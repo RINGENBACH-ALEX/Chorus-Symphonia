@@ -1,0 +1,251 @@
+/* ====================================================== */
+/* RESPONSIVE – approche mobile-first                     */
+/* Mobile : < 768px (styles par défaut)                   */
+/* Tablette : >= 768px                                    */
+/* Desktop : >= 1024px                                    */
+/* ====================================================== */
+
+/* Très petits écrans */
+@media (max-width: 359px) {
+    :root {
+        --gutter: 16px;
+    }
+
+    .header__site-title,
+    .header__logo {
+        font-size: 1.05rem;
+    }
+
+    .partners__logo {
+        flex-basis: 100%;
+    }
+}
+
+/* ---------------------- */
+/* TABLETTE               */
+/* ---------------------- */
+@media (min-width: 768px) {
+    :root {
+        --gutter: 32px;
+        --section-space: 80px;
+    }
+
+    /* Hero */
+    .hero--small {
+        min-height: 400px;
+    }
+
+    .hero__info-item {
+        font-size: 1.05rem;
+    }
+
+    .hero__actions {
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+    }
+
+    /* Grilles */
+    .grid--2,
+    .grid--3,
+    .grid--4,
+    .values-grid,
+    .team-grid,
+    .program-grid,
+    .tickets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .partners__logo {
+        flex-basis: calc(25% - 12px);
+    }
+
+    .partners__cta {
+        padding: 48px 32px;
+    }
+
+    /* Programme : date à gauche, contenu à droite */
+    .program__item {
+        flex-direction: row;
+    }
+
+    .program__date {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        min-width: 120px;
+        padding: 24px 16px;
+    }
+
+    .program__day {
+        font-size: 2.6rem;
+    }
+
+    .program__content {
+        flex: 1;
+        padding: 26px 28px;
+    }
+
+    /* Infos pratiques */
+    .info-box {
+        padding: 26px 30px;
+    }
+
+    /* Contact */
+    .contact__form {
+        padding: 32px;
+    }
+
+    /* Billetterie */
+    .booking__row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    /* 404 */
+    .page-404__card {
+        padding: 3.5rem 3rem;
+    }
+}
+
+/* ---------------------- */
+/* DESKTOP                */
+/* ---------------------- */
+@media (min-width: 1024px) {
+
+    /* Navigation horizontale : plus besoin du hamburger */
+    .header__nav {
+        min-height: 76px;
+    }
+
+    .header__menu-toggle {
+        display: none;
+    }
+
+    .header__nav-list,
+    .header__nav-list.active {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+        max-height: none;
+        overflow: visible;
+        padding: 0;
+        background: none;
+        box-shadow: none;
+    }
+
+    .header__nav-item {
+        border-bottom: none;
+    }
+
+    .header__nav-link {
+        padding: 10px 10px;
+        font-size: 0.92rem;
+    }
+
+    .header__nav-link::after {
+        bottom: 2px;
+        left: 10px;
+    }
+
+    .header__nav-link:hover::after,
+    .header__nav-link--active::after {
+        width: calc(100% - 20px);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 88vh;
+    }
+
+    .hero--small {
+        min-height: 460px;
+    }
+
+    .artist-hero {
+        min-height: 520px;
+    }
+
+    /* Grilles */
+    .grid--3,
+    .tickets {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid--4,
+    .values-grid,
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tickets--4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Scènes : image et texte côte à côte, en alternance */
+    .venue {
+        gap: 48px;
+    }
+
+    .venue__item {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .venue__item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .venue__image {
+        flex: 0 0 50%;
+        aspect-ratio: auto;
+        min-height: 420px;
+    }
+
+    .venue__content {
+        flex: 1;
+        justify-content: center;
+        padding: 48px;
+    }
+
+    /* Contact : formulaire + coordonnées sur 2 colonnes */
+    .contact {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+        gap: 48px;
+    }
+
+    /* Footer sur 4 colonnes */
+    .footer__grid {
+        grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+    }
+}
+
+/* Grand écran : un peu plus d'air dans le menu */
+@media (min-width: 1200px) {
+    .header__nav-link {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+
+    .header__nav-link::after {
+        left: 14px;
+    }
+
+    .header__nav-link:hover::after,
+    .header__nav-link--active::after {
+        width: calc(100% - 28px);
+    }
+}

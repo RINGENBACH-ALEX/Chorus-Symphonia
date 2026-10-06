@@ -2,34 +2,69 @@
 
 /* Button Block */
 .btn {
-    display: inline-block;
-    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 28px;
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1.2;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 999px;
+    border: 2px solid transparent;
     cursor: pointer;
-    transition: var(--transition);
-    border: none;
     text-decoration: none;
+    transition: background-color var(--transition), color var(--transition),
+        border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 /* Button Modifiers */
 .btn--primary {
     /* Bouton doré avec écriture noire */
     background-color: var(--or-profond);
+    border-color: var(--or-profond);
     color: var(--noir);
+    box-shadow: 0 6px 16px rgba(215, 181, 110, 0.35);
+}
+
+.btn--primary:hover {
+    background-color: var(--doré-clair);
+    border-color: var(--doré-clair);
 }
 
 .btn--outline {
     background-color: transparent;
-    /* Outline doré */
     color: var(--or-profond);
-    border: 2px solid var(--or-profond);
+    border-color: var(--or-profond);
 }
 
-.btn--sm {
-    padding: 10px 20px;
+.btn--outline:hover {
+    background-color: var(--or-profond);
+    color: var(--noir);
+}
+
+/* Bouton "En savoir plus" des cartes */
+.btn--secondary {
+    background-color: transparent;
+    color: var(--noir-doux);
+    border-color: var(--noir-doux);
+}
+
+.btn--secondary:hover {
+    background-color: var(--noir-doux);
+    color: var(--or-profond);
+}
+
+.btn--sm,
+.btn--small {
+    min-height: 40px;
+    padding: 8px 20px;
     font-size: 0.9rem;
 }
